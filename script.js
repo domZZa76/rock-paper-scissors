@@ -38,7 +38,7 @@ let lose = "You lose"
 let tie = "It is a tie"
 
 for(var i=0;i<5;i++){
-    let playerChoice = prompt("Pick a move");
+    let playerChoice = prompt("Pick a move").toLowerCase();
     const computerChoice = computerChoiceFormula()
     console.log(playRound(playerChoice, computerChoice))
     console.log("your score = " + playerScore);
