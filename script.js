@@ -1,17 +1,15 @@
 //COMPUTER SELECTION 
-
-let randNumber = 0;
-randNumber = Math.ceil(Math.random() * 3);
-
-function computerChoiceFormula(randNumber) {
-    if (randNumber === 1) {
-        return 'rock'
-    } else if (randNumber === 2) {
-        return 'paper'
+function computerChoiceFormula() {
+    const random = Math.ceil(Math.random() * 3);
+    if(random === 1) {
+        return 'rock';
+    } else if (random === 2){
+        return 'paper';
     } else {
         return 'scissors'
     }
 }
+
 //PLAY ROUND
 
 function playRound(playerChoice, computerChoice) {
@@ -41,7 +39,7 @@ let tie = "It is a tie"
 
 for(var i=0;i<5;i++){
     let playerChoice = prompt("Pick a move");
-    const computerChoice = computerChoiceFormula(randNumber)
+    const computerChoice = computerChoiceFormula()
     console.log(playRound(playerChoice, computerChoice))
     console.log("your score = " + playerScore);
     console.log("Computer's score = " + computerScore);
